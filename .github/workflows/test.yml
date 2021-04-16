@@ -13,6 +13,8 @@ jobs:
         env:
           NAME: ${{ matrix.person }}
         run: |
-          echo "Hello $NAME"
+          for i in {0..10000}; do
+            echo "Hello $NAME"
+          done
           exit 1
 
