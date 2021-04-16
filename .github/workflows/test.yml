@@ -6,13 +6,12 @@ jobs:
     name: Test Matrix
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
       matrix:
         person: ['Jack', 'Jill']
     steps:
       - name: Say hello to ${{ matrix.person }}
         env:
-          NAME = ${{ matrix.person }}
+          NAME: ${{ matrix.person }}
         run: |
           echo "Hello $NAME"
           exit 1
